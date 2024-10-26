@@ -1,45 +1,33 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 
+export default function ApiCallWithBtn() {
+  const[data,setdata]=useState([]); 
 
-import React,{useEffect, useState} from "react";
-
-function ApiCallWithBtn(){
-const [data,setdata]= useState([])
-
-const handleapi =async ()=>{
-let res = await fetch("https://fakestoreapi.com/products")
+const handleapi= async ()=>{
+let res =await fetch("https://fakestoreapi.com/products")
 let apidata =await res.json()
-setdata(apidata)
+setdata(apidata  )
 }
+useEffect(()=>{
+  handleapi()
+
+},[])
 
 
-return(
-<>
-<button onClick={handleapi}>click</button> 
-{data.map((da)=>(
-    
+  return (
+    <div>
+       {/* <button onClick={handleapi}>api data</button>  */}
+      {data.map((da)=>(
 <div>
-<img height={200}width={200} src={da.image}/>
-<h2>{da.title}</h2>
-<h3>{da.price}</h3>
+    <img src={da.image} height={200} width={200}/>
+<h1>{da.title}</h1>
+<h4>{da.price}</h4>
+
+
 
 </div>
-
-
-))}
-
-
-
-
-
-
-
-
-</>
-
-
-
-
-)
-
+      ))}
+    </div>
+  )
 }
-export default ApiCallWithBtn;
