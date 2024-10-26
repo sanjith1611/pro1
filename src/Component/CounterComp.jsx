@@ -22,7 +22,7 @@ if(ma == "reset"){
 
 return(
     <>
-    <h1>jailer - {ticket}</h1><br /><br />
+   <h1 className="h1tag">jailer - {ticket}</h1><br /><br />
 <button onClick={()=>handleoperation("add")}>add</button>
 <button onClick={()=>handleoperation("sub")}>minus</button>
 <button onClick={()=>handleoperation("reset")}>reset</button>

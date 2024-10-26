@@ -14,6 +14,7 @@ setage(e.target.value)
 
   return (
     <div>
+     
       <label>Enyer your name :</label>
     <input onChange={handlename} placeholder='name'/><br /><br />
 
@@ -22,7 +23,7 @@ setage(e.target.value)
       <label>Enyer your age :</label>
       <input onChange={handleage} placeholder='age' /><br /><br />
       <button>submit</button>
-
+      
 <div>
 <h2>name -{name}</h2>
 
