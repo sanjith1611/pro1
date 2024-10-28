@@ -47,7 +47,7 @@ return;
     {data.map((da,i)=>(
 <div className='d-flex mt-5' key={i}>
  
-<h2> {(i=i+1)}.{da.task}</h2>
+<h2> {(i=i+1)}.{da.task.value}</h2>
 <span ><FaEdit /></span>
 <span onClick={()=>handledelet(da.id)}><MdDeleteOutline /></span>
 </div>
