@@ -7,7 +7,7 @@ import Main from "./Component/main/Main";
 // import ApiCallWithBtn from "./Component/ApiCallWithBtn";
 // import LifeCycleFunComp from "./Component/LifeCycleFunComp";
 // import FormReact from "./Component/FormReact";
-
+import NewTodo from "./Component/NewTodo"
 
 
 
@@ -25,10 +25,10 @@ function App() {
 
 {/* <ReactHook/> */}
 {/* <TodoList/> */}
-<SideBar/>
-<Main/>
+{/* <SideBar/>
+<Main/> */}
 
-
+<NewTodo/>
 
 </>
 
